@@ -10,7 +10,7 @@ public class CameraControl : MonoBehaviour
     private float _fieldOfView;
     
     private float _zoomSpeed = 0.1f;
-    private float _panSpeed = 10f;
+    private float _panSpeed = 5f;
 
     private Vector3 _lastTouchPosition;
     private int _panFingerId;
@@ -36,6 +36,8 @@ public class CameraControl : MonoBehaviour
                 } else if (touch.fingerId == _panFingerId && touch.phase == TouchPhase.Moved) {
                     // Camera Panning
                     PanCamera(touch.position);
+                    //var touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                    //transform.position -= new Vector3(touchDeltaPosition.x * _panSpeed, 0, touchDeltaPosition.y * _panSpeed);
                 }
 
                 break;
