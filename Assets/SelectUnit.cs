@@ -39,6 +39,11 @@ public class SelectUnit : MonoBehaviour
                         selectedUnit.transform.Find("Marker").gameObject.SetActive(true);
                     }
                 }
+                else if (!_rayHit.collider)
+                {
+                    selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
+                    selectedUnit = null;
+                }
             }
         }
     }
