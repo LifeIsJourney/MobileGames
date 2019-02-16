@@ -11,6 +11,8 @@ public class Unit : MonoBehaviour
     private Camera _mainCamera;
     
     private readonly float _rotateSpeed = 1f;
+
+    private bool _isRotating;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class Unit : MonoBehaviour
         _mainCamera = Camera.main;
         if (_mainCamera != null) selectUnit = _mainCamera.GetComponent<SelectUnit>();
         _agent = gameObject.GetComponent<NavMeshAgent>();
+        _isRotating = false;
     }
 
     // Update is called once per frame
@@ -28,7 +31,8 @@ public class Unit : MonoBehaviour
         {
             if (Input.touchCount == 1)
             {
-                if (Input.touches[0].phase != TouchPhase.Moved && Physics.Raycast(_mainCamera.ScreenPointToRay(Input.touches[0].position), out _hit))
+                if (Input.touches[0].phase != TouchPhase.Moved && 
+                    Physics.Raycast(_mainCamera.ScreenPointToRay(Input.touches[0].position), out _hit) && !_isRotating)
                 {
                     if (_hit.transform.CompareTag("Floor"))
                     {
@@ -40,6 +44,23 @@ public class Unit : MonoBehaviour
                 if (Input.touches[0].phase == TouchPhase.Moved)
                 {
                     transform.Rotate(0, Input.touches[0].deltaPosition.x * _rotateSpeed, 0, Space.World);
+                }
+                
+                if (Input.touches[0].phase == TouchPhase.Moved && 
+                    Physics.Raycast(_mainCamera.ScreenPointToRay(Input.touches[0].position), out _hit))
+                {
+                    if (_hit.transform.CompareTag("SelectableUnit"))
+                    {
+                        _isRotating = true;
+                        var prevPos = Vector3.zero;
+                        var posDelta = _mainCamera.ScreenToWorldPoint(Input.touches[0].position) - prevPos;
+                        
+                        transform.Rotate(transform.up, Vector3.Dot(posDelta, _mainCamera.transform.right), Space.World);
+
+                        prevPos = Input.touches[0].position;
+                    }
+
+                    _isRotating = false;
                 }
             }
         }
