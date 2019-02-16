@@ -58,8 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraControl.cs" />
-    <Compile Include="Assets\Manipulation.cs" />
-    <Compile Include="Assets\ObjectManipulation.cs" />
     <Compile Include="Assets\SelectUnit.cs" />
     <Compile Include="Assets\Unit.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
