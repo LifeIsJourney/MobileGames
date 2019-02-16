@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.UI;
 using Vector3 = UnityEngine.Vector3;
 
 public class CameraControl : MonoBehaviour
 {
     private Camera _camera;
     private float _fieldOfView;
+    private RaycastHit _rayHit;
     
     private float _zoomSpeed = 0.1f;
+    
     private float _panSpeed = 5f;
-
     private Vector3 _lastTouchPosition;
     private int _panFingerId;
+
+    private bool _isTap;
     
     void Awake()
     {
@@ -24,37 +28,58 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (Input.touchCount)
+        if (Input.touchCount == 1)
         {
-            case 1:
+            var touch = Input.GetTouch(0);
+
+            switch (touch.phase)
             {
-                var touch = Input.GetTouch(0);
-                
-                if (touch.phase == TouchPhase.Began) {
+                case TouchPhase.Began:
+                    Debug.Log("Entered Began Phase");
                     _lastTouchPosition = touch.position;
                     _panFingerId = touch.fingerId;
-                } else if (touch.fingerId == _panFingerId && touch.phase == TouchPhase.Moved) {
-                    // Camera Panning
-                    PanCamera(touch.position);
-                    //var touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                    //transform.position -= new Vector3(touchDeltaPosition.x * _panSpeed, 0, touchDeltaPosition.y * _panSpeed);
-                }
+                    _isTap = true;
+                    break;
+                
+                case TouchPhase.Moved:
+                    Debug.Log("Entered Moved Phase");
+                    if (touch.fingerId == _panFingerId)
+                    {
+                        Debug.Log("Panning Camera");
+                        PanCamera(touch.position);
 
-                break;
+                        _isTap = false;
+                    }
+                    break;
+                    
+                case TouchPhase.Stationary:
+                    Debug.Log("Entered Stationary Phase");
+                    break;
+                
+                case TouchPhase.Ended:
+                    Debug.Log("Entered Ended Phase");
+
+                    if (_isTap)
+                    {
+                        if (Physics.Raycast(_camera.ScreenPointToRay(touch.position), out _rayHit))
+                        {
+                            Debug.Log("Entered Tap Area");
+                            Debug.Log(_rayHit.collider.name);
+                            _rayHit.collider.GetComponent<Cube>().ChangeColor();
+                        }
+                    }
+                    break;
             }
-            case 2:
+        }
+        else if (Input.touchCount == 2)
+        {
+            var touchZero = Input.touches[0];
+            var touchOne = Input.touches[1];
+
+            if (touchZero.phase == TouchPhase.Moved && touchOne.phase == TouchPhase.Moved)
             {
-                // Save the touches
-                var touchZero = Input.touches[0];
-                var touchOne = Input.touches[1];
-
-                if ((touchZero.phase == TouchPhase.Stationary || touchZero.phase == TouchPhase.Moved) && touchOne.phase == TouchPhase.Moved)
-                {
-                    // Camera Zoom
-                    ZoomCamera(touchZero, touchOne);
-                }
-
-                break;
+                Debug.Log("Zooming Camera");
+                ZoomCamera(touchZero, touchOne);
             }
         }
     }
