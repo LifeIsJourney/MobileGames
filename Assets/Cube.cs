@@ -10,7 +10,6 @@ public class Cube : MonoBehaviour
     [HideInInspector] public bool currentlySelected = false;
 
     private MeshRenderer _cubeMeshRenderer;
-    private ObjectManipulation _manipulation;
     
     // Start is called before the first frame update
     void Start()
@@ -49,7 +48,7 @@ public class Cube : MonoBehaviour
     {
         if (currentlySelected)
         {
-            _manipulation.rotate();
+            
         }
     }
 }
