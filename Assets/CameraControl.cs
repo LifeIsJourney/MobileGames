@@ -18,6 +18,8 @@ public class CameraControl : MonoBehaviour
     private int _panFingerId;
 
     private bool _isTap;
+    private Cube _cube;
+    private Transform _toDrag;
     
     void Awake()
     {
@@ -36,6 +38,14 @@ public class CameraControl : MonoBehaviour
             {
                 case TouchPhase.Began:
                     Debug.Log("Entered Began Phase");
+
+                    if (Physics.Raycast(_camera.ScreenPointToRay(touch.position), out _rayHit))
+                    {
+                        Debug.Log("Object Hit on Began: " + _rayHit.collider.name);
+                        _cube = _rayHit.collider.GetComponent<Cube>();
+                    }
+                        
+                    
                     _lastTouchPosition = touch.position;
                     _panFingerId = touch.fingerId;
                     _isTap = true;
@@ -43,17 +53,26 @@ public class CameraControl : MonoBehaviour
                 
                 case TouchPhase.Moved:
                     Debug.Log("Entered Moved Phase");
+                    
                     if (touch.fingerId == _panFingerId)
                     {
                         Debug.Log("Panning Camera");
+                        
                         PanCamera(touch.position);
 
                         _isTap = false;
                     }
+
+                    if (_cube.currentlySelected)
+                    {
+                        _cube.Move(touch, _cube);
+                    }
+                    
                     break;
                     
                 case TouchPhase.Stationary:
                     Debug.Log("Entered Stationary Phase");
+                    
                     break;
                 
                 case TouchPhase.Ended:
@@ -61,11 +80,14 @@ public class CameraControl : MonoBehaviour
 
                     if (_isTap)
                     {
+                        Debug.Log("Entered Tap Area");
                         if (Physics.Raycast(_camera.ScreenPointToRay(touch.position), out _rayHit))
                         {
-                            Debug.Log("Entered Tap Area");
-                            Debug.Log(_rayHit.collider.name);
-                            _rayHit.collider.GetComponent<Cube>().ChangeColor();
+                            Debug.Log("Object Hit: " + _rayHit.collider.name);
+                            
+                            var cubeScript = _rayHit.collider.GetComponent<Cube>();
+                            cubeScript.currentlySelected = !cubeScript.currentlySelected;
+                            cubeScript.ChangeColor();
                         }
                     }
                     break;
