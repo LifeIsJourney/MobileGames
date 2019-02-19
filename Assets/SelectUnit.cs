@@ -5,12 +5,13 @@ public class SelectUnit : MonoBehaviour
     public GameObject selectedUnit;
     public float panSpeed = 10f;
     public float zoomSpeed = 0.1f;
+    public float rotateSpeed = 1f;
 
     private RaycastHit _rayHit;
     private Camera _camera;
     private float _fieldOfView;
     private bool _hasMoved;
-    private Vector3 _prevTouchPos;
+    // private Vector3 _prevTouchPos;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class SelectUnit : MonoBehaviour
                 Debug.Log("One Finger Touched - Nothing Selected");
                 if (Input.touches[0].phase == TouchPhase.Began)
                 {
-                    _prevTouchPos = Input.touches[0].position;
+                    // _prevTouchPos = Input.touches[0].position;
                     _hasMoved = false;
                 }
                 
@@ -38,7 +39,8 @@ public class SelectUnit : MonoBehaviour
                     _hasMoved = true;
                 }
 
-                if (!_hasMoved && Physics.Raycast(_camera.ScreenPointToRay(Input.touches[0].position), out _rayHit))
+                if (!_hasMoved && Input.touches[0].phase == TouchPhase.Ended && 
+                    Physics.Raycast(_camera.ScreenPointToRay(Input.touches[0].position), out _rayHit))
                 {
                     Debug.Log("Object Tapped - Assigning New Object");
                     if (_rayHit.transform.CompareTag("SelectableUnit"))
@@ -56,6 +58,12 @@ public class SelectUnit : MonoBehaviour
                 {
                     Debug.Log("Zooming Camera");
                     ZoomCamera(Input.touches[0], Input.touches[1]);
+                }
+
+                if (Input.touches[0].phase == TouchPhase.Moved)
+                {
+                    Debug.Log("Rotating Camera");
+                    RotateCamera(Input.touches[0], Input.touches[1]);
                 }
             }
         }
@@ -120,5 +128,13 @@ public class SelectUnit : MonoBehaviour
         _fieldOfView += magDiff * zoomSpeed;
         _camera.fieldOfView = _fieldOfView;
         _camera.fieldOfView = Mathf.Clamp(_fieldOfView, 0.1f, 119.9f);
+    }
+    
+    /*
+     * Method for Rotating Camera
+     */
+    private void RotateCamera(Touch touchZero, Touch touchOne)
+    {
+        transform.Rotate(0, Input.touches[0].deltaPosition.x * rotateSpeed, 0, Space.World);
     }
 }
