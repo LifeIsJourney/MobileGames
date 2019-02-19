@@ -60,6 +60,7 @@
     <Compile Include="Assets\CameraControl.cs" />
     <Compile Include="Assets\SelectUnit.cs" />
     <Compile Include="Assets\Unit.cs" />
+    <Compile Include="Assets\UnitBehaviour.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Ethan Mc Grath/Desktop/MG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

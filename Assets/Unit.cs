@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class Unit : MonoBehaviour
+public class SquareControl : UnitBehaviour
 {
     public SelectUnit selectUnit;
     private NavMeshAgent _agent;
@@ -14,17 +12,14 @@ public class Unit : MonoBehaviour
 
     private bool _isRotating;
     
-    // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Unit Start()");
         _mainCamera = Camera.main;
         if (_mainCamera != null) selectUnit = _mainCamera.GetComponent<SelectUnit>();
         _agent = gameObject.GetComponent<NavMeshAgent>();
-        _isRotating = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (selectUnit != null && selectUnit.selectedUnit == gameObject)
@@ -64,5 +59,31 @@ public class Unit : MonoBehaviour
                 }
             }
         }
+    }
+
+
+    public override void Move()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void Scale()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void Rotate()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void OnSelect()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void OnDeselect()
+    {
+        throw new System.NotImplementedException();
     }
 }

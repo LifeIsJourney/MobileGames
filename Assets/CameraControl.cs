@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
 public class CameraControl : MonoBehaviour
@@ -25,7 +21,6 @@ public class CameraControl : MonoBehaviour
         _selectUnit = GetComponent<SelectUnit>().selectedUnit;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_selectUnit == null)
