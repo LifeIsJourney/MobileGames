@@ -4,28 +4,31 @@ public class SelectUnit : MonoBehaviour
 {
     public GameObject selectedUnit;
     public float panSpeed = 10f;
+    public float zoomSpeed = 0.1f;
 
     private RaycastHit _rayHit;
     private Camera _camera;
+    private float _fieldOfView;
     private bool _hasMoved;
     private Vector3 _prevTouchPos;
 
     private void Start()
     {
         _camera = GetComponent<Camera>();
+        _fieldOfView = _camera.fieldOfView;
     }
 
     void Update()
     {
         if (selectedUnit == null) // If there is no unit selected
         {
-            Debug.Log("Nothing Currently Selected");
             if (Input.touchCount == 1) // If there is one touch on the screen
             {
-                Debug.Log("One Finger Touched");
+                Debug.Log("One Finger Touched - Nothing Selected");
                 if (Input.touches[0].phase == TouchPhase.Began)
                 {
                     _prevTouchPos = Input.touches[0].position;
+                    _hasMoved = false;
                 }
                 
                 if (Input.touches[0].phase == TouchPhase.Moved)
@@ -43,6 +46,16 @@ public class SelectUnit : MonoBehaviour
                         selectedUnit = _rayHit.transform.gameObject;
                         selectedUnit.transform.Find("Marker").gameObject.SetActive(true);
                     }
+                }
+            }
+
+            if (Input.touchCount == 2)
+            {
+                Debug.Log("Two Fingers Touched - Nothing Selected");
+                if (Input.touches[0].phase == TouchPhase.Moved && Input.touches[1].phase == TouchPhase.Moved)
+                {
+                    Debug.Log("Zooming Camera");
+                    ZoomCamera(Input.touches[0], Input.touches[1]);
                 }
             }
         }
@@ -85,5 +98,27 @@ public class SelectUnit : MonoBehaviour
         transform.Translate(move, Space.World);
         _prevTouchPos = newTouchPosition;
         */
+    }
+    
+    /*
+     * Method for Zooming Camera
+     */
+    void ZoomCamera(Touch touchZero, Touch touchOne)
+    {
+        // Store touch position from previous frame using delta position
+        var touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+        var touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+        // Distance between the touches in each frame
+        var prevTouchDistance = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+        var curTouchDistance = (touchZero.position - touchOne.position).magnitude;
+
+        // Difference in distances between each frame
+        var magDiff = prevTouchDistance - curTouchDistance;
+
+        // Change field of view in relation to distance between touches
+        _fieldOfView += magDiff * zoomSpeed;
+        _camera.fieldOfView = _fieldOfView;
+        _camera.fieldOfView = Mathf.Clamp(_fieldOfView, 0.1f, 119.9f);
     }
 }
