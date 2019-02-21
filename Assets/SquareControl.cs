@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 public class SquareControl : UnitBehaviour
 {
-    public SelectUnit selectUnit;
+    public CameraController selectUnit;
     private NavMeshAgent _agent;
     private RaycastHit _hit;
     private Camera _mainCamera;
@@ -16,7 +16,7 @@ public class SquareControl : UnitBehaviour
     {
         Debug.Log("Unit Start()");
         _mainCamera = Camera.main;
-        if (_mainCamera != null) selectUnit = _mainCamera.GetComponent<SelectUnit>();
+        if (_mainCamera != null) selectUnit = _mainCamera.GetComponent<CameraController>();
         _agent = gameObject.GetComponent<NavMeshAgent>();
     }
 

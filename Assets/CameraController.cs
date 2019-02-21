@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SelectUnit : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     public GameObject selectedUnit;
     public float panSpeed = 10f;
@@ -10,6 +10,7 @@ public class SelectUnit : MonoBehaviour
     private RaycastHit _rayHit;
     private Camera _camera;
     private float _fieldOfView;
+
     private bool _hasMoved;
     // private Vector3 _prevTouchPos;
 
@@ -31,7 +32,7 @@ public class SelectUnit : MonoBehaviour
                     // _prevTouchPos = Input.touches[0].position;
                     _hasMoved = false;
                 }
-                
+
                 if (Input.touches[0].phase == TouchPhase.Moved)
                 {
                     Debug.Log("Finger Moved - Panning Camera");
@@ -39,7 +40,7 @@ public class SelectUnit : MonoBehaviour
                     _hasMoved = true;
                 }
 
-                if (!_hasMoved && Input.touches[0].phase == TouchPhase.Ended && 
+                if (!_hasMoved && Input.touches[0].phase == TouchPhase.Ended &&
                     Physics.Raycast(_camera.ScreenPointToRay(Input.touches[0].position), out _rayHit))
                 {
                     Debug.Log("Object Tapped - Assigning New Object");
@@ -53,6 +54,7 @@ public class SelectUnit : MonoBehaviour
 
             if (Input.touchCount == 2)
             {
+                // TODO: Differentiate Between Pinch and Rotate
                 Debug.Log("Two Fingers Touched - Nothing Selected");
                 if (Input.touches[0].phase == TouchPhase.Moved && Input.touches[1].phase == TouchPhase.Moved)
                 {
@@ -67,22 +69,48 @@ public class SelectUnit : MonoBehaviour
                 }
             }
         }
-        else
+        else // If a unit is selected
         {
-            if (Input.touchCount == 1)
+            if (Input.touchCount == 1) // If there is one touch
             {
-                if (Physics.Raycast(GetComponent<Camera>().ScreenPointToRay(Input.touches[0].position), out _rayHit))
+                if (Input.touches[0].phase == TouchPhase.Began)
                 {
-                    if (_rayHit.transform.CompareTag("SelectableUnit"))
+                    _hasMoved = false;
+                }
+
+                if (Input.touches[0].phase == TouchPhase.Moved)
+                {
+                    _hasMoved = true;
+                    // TODO: Move The Object
+                }
+                
+                if (!_hasMoved && Input.touches[0].phase == TouchPhase.Ended &&
+                    Physics.Raycast(GetComponent<Camera>().ScreenPointToRay(Input.touches[0].position), out _rayHit)) // If a ray hits anything and touch has not moved
+                {
+                    if (_rayHit.transform.CompareTag("SelectableUnit")) // If it hits a selectable unit
                     {
-                        Debug.Log("Switching Selected Object");
-                        selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
-                        selectedUnit = null;
-                        selectedUnit = _rayHit.transform.gameObject;
-                        selectedUnit.transform.Find("Marker").gameObject.SetActive(true);
+                        var objectHit = _rayHit.transform.gameObject;
+                        
+                        if (selectedUnit.transform.name == objectHit.transform.name)
+                        {
+                            Debug.Log("Same Object - Deselecting");
+                            
+                            selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
+                            selectedUnit = null;
+                        }
+                        else
+                        {
+                            Debug.Log("Not Same Object - Switching Object");
+                            
+                            selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
+                            selectedUnit = null;
+
+                            selectedUnit = objectHit;
+                            selectedUnit.transform.Find("Marker").gameObject.SetActive(true);
+                        }
                     }
                 }
-                else if (!_rayHit.collider)
+                else if (!_rayHit.collider) // If the ray doesn't hit anything
                 {
                     selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
                     selectedUnit = null;
@@ -99,7 +127,7 @@ public class SelectUnit : MonoBehaviour
         var touchDeltaPosition = Input.touches[0].deltaPosition;
         transform.Translate(-touchDeltaPosition.x * panSpeed * Time.deltaTime,
             0, -touchDeltaPosition.y * panSpeed * Time.deltaTime);
-        
+
         /*
         var offset = _camera.ScreenToViewportPoint(_prevTouchPos - newTouchPosition);
         var move = new Vector3(offset.x * panSpeed, 0, offset.y * panSpeed);
@@ -107,11 +135,11 @@ public class SelectUnit : MonoBehaviour
         _prevTouchPos = newTouchPosition;
         */
     }
-    
+
     /*
      * Method for Zooming Camera
      */
-    void ZoomCamera(Touch touchZero, Touch touchOne)
+    private void ZoomCamera(Touch touchZero, Touch touchOne)
     {
         // Store touch position from previous frame using delta position
         var touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
@@ -129,7 +157,7 @@ public class SelectUnit : MonoBehaviour
         _camera.fieldOfView = _fieldOfView;
         _camera.fieldOfView = Mathf.Clamp(_fieldOfView, 0.1f, 119.9f);
     }
-    
+
     /*
      * Method for Rotating Camera
      */

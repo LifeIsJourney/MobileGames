@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
-  - component: {fileID: 534669907}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -341,7 +341,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: -45, z: 0}
---- !u!114 &534669907
+--- !u!114 &534669906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,10 +350,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b63f1f838fc164c86361247cacbfa0, type: 3}
+  m_Script: {fileID: 11500000, guid: dbb38efdc31bdf24f9fc0c32ec675bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   selectedUnit: {fileID: 0}
+  panSpeed: 10
+  zoomSpeed: 0.1
+  rotateSpeed: 1
 --- !u!1 &819773623
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,8 +461,6 @@ GameObject:
   - component: {fileID: 961312781}
   - component: {fileID: 961312780}
   - component: {fileID: 961312779}
-  - component: {fileID: 961312778}
-  - component: {fileID: 961312784}
   - component: {fileID: 961312783}
   m_Layer: 0
   m_Name: CubeTwo
@@ -468,23 +469,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &961312778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961312777}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2287c07b209718647a5b0769b5ef8a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  red: {fileID: 2100000, guid: 5c5a26623772e354281bb04a1bfd3fed, type: 2}
-  green: {fileID: 2100000, guid: 7167a8269e746e84d810be9a90fadffa, type: 2}
-  currentlySelected: 0
-  _cubeMeshRenderer: {fileID: 0}
 --- !u!65 &961312779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -580,22 +564,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &961312784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961312777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921889b9b8a515b418366649ffa05e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectUnit: {fileID: 534669907}
-  _agent: {fileID: 961312783}
-  _mainCamera: {fileID: 534669904}
-  _isRotating: 0
 --- !u!1 &1290287007
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,8 +653,6 @@ GameObject:
   - component: {fileID: 1782268403}
   - component: {fileID: 1782268402}
   - component: {fileID: 1782268401}
-  - component: {fileID: 1782268405}
-  - component: {fileID: 1782268407}
   - component: {fileID: 1782268406}
   m_Layer: 0
   m_Name: CubeOne
@@ -768,23 +734,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1782268405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782268400}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2287c07b209718647a5b0769b5ef8a97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  red: {fileID: 2100000, guid: 5c5a26623772e354281bb04a1bfd3fed, type: 2}
-  green: {fileID: 2100000, guid: 7167a8269e746e84d810be9a90fadffa, type: 2}
-  currentlySelected: 0
-  _cubeMeshRenderer: {fileID: 0}
 --- !u!195 &1782268406
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -807,19 +756,3 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1782268407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782268400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 921889b9b8a515b418366649ffa05e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectUnit: {fileID: 534669907}
-  _agent: {fileID: 1782268406}
-  _mainCamera: {fileID: 534669904}
-  _isRotating: 0
