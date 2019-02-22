@@ -42,12 +42,7 @@ public class SquareControl : UnitBehaviour
                     if (_hit.collider.CompareTag("SelectableUnit"))
                     {
                         Debug.Log("Moving");
-                        var newPos = _hit.point;
-                        var position = _cameraController.selectedUnit.transform.position;
-                        newPos.y = position.y;
-
-                        position = Vector3.Lerp(position, newPos, 5f);
-                        _cameraController.selectedUnit.transform.position = position;
+                        Move();
                     }
                 }
 
@@ -64,7 +59,12 @@ public class SquareControl : UnitBehaviour
 
     public override void Move()
     {
-        throw new System.NotImplementedException();
+        var newPos = _hit.point;
+        var position = _cameraController.selectedUnit.transform.position;
+        newPos.y = position.y;
+
+        position = Vector3.Lerp(position, newPos, 5f);
+        _cameraController.selectedUnit.transform.position = position;
     }
 
     public override void Scale()
