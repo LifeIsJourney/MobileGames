@@ -3,74 +3,60 @@ using UnityEngine.AI;
 
 public class SquareControl : UnitBehaviour
 {
-    public CameraController selectUnit;
-    private NavMeshAgent _agent;
-    private RaycastHit _hit;
-    private Camera _mainCamera;
+    private CameraController _cameraController;
     
-    private readonly float _rotateSpeed = 1f;
-
-    private bool _isRotating;
+    private RaycastHit _hit; // RaycastHit variable
+    private Camera _mainCamera; // Main camera variable
+    // private readonly float _rotateSpeed = 1f; // Unit rotation speed
+    private bool _isRotating; // Track if unit is rotating
+    private bool _isDragging; // Track if unit is being dragged
+    private Transform _toMove;
+    private float _distance;
     
     void Start()
     {
         Debug.Log("Unit Start()");
-        _mainCamera = Camera.main;
-        if (_mainCamera != null) selectUnit = _mainCamera.GetComponent<CameraController>();
-        _agent = gameObject.GetComponent<NavMeshAgent>();
+        _mainCamera = Camera.main; // Assign camera variable
+        if (_mainCamera != null) _cameraController = _mainCamera.GetComponent<CameraController>(); // Assign camera controller
     }
 
     void Update()
     {
-        if (selectUnit != null && selectUnit.selectedUnit == gameObject)
+        if (_cameraController != null && _cameraController.selectedUnit == gameObject) // If a unit is selected and the unit is a gameObject
         {
-            if (Input.touchCount == 1)
+            if (Input.touchCount == 1) // If one finger is touch
             {
-                if (Input.touches[0].phase != TouchPhase.Moved && 
-                    Physics.Raycast(_mainCamera.ScreenPointToRay(Input.touches[0].position), out _hit) && !_isRotating)
+                if (Input.touches[0].phase == TouchPhase.Began && 
+                    Physics.Raycast(_mainCamera.ScreenPointToRay(Input.touches[0].position), out _hit)) // If touch phase is began and it hits a unit
                 {
-                    if (_hit.transform.CompareTag("Floor"))
+                    if (_hit.transform.CompareTag("SelectableUnit")) // If the unit is selectable
                     {
-                        Debug.Log("Ray Hit Floor");
-                        _agent.destination = _hit.point;
+                        Debug.Log("Ready To Drag");
+
+                        _toMove = _hit.transform;
+                        _distance = _hit.transform.position.y - _mainCamera.transform.position.y;
+                        _isDragging = true;
                     }
                 }
 
-                if (Input.touches[0].phase == TouchPhase.Moved)
+                if (Input.touches[0].phase == TouchPhase.Moved && _isDragging)
                 {
-                    transform.Rotate(0, Input.touches[0].deltaPosition.x * _rotateSpeed, 0, Space.World);
+                    Debug.Log("Moving");
+
+                    var touchWorldPoint = _mainCamera.ScreenToWorldPoint(Input.touches[0].position);
+                    var touchZ = touchWorldPoint.z;
+                    
+                    var position = new Vector3(Input.touches[0].position.x, _distance, touchZ);
+                    position = _mainCamera.ScreenToWorldPoint(position);
+                    _toMove.position = position;
                 }
-                
-                if (Input.touches[0].phase == TouchPhase.Moved && 
-                    Physics.Raycast(_mainCamera.ScreenPointToRay(Input.touches[0].position), out _hit))
+
+                if ((Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Ended) &&
+                    _isDragging)
                 {
-                    if (_hit.transform.CompareTag("SelectableUnit"))
-                    {
-                        _isRotating = true;
-                        var prevPos = Vector3.zero;
-                        var posDelta = _mainCamera.ScreenToWorldPoint(Input.touches[0].position) - prevPos;
-                        
-                        transform.Rotate(transform.up, Vector3.Dot(posDelta, _mainCamera.transform.right), Space.World);
-
-                        prevPos = Input.touches[0].position;
-                    }
-
-                    _isRotating = false;
+                    Debug.Log("Finished Moving");
+                    _isDragging = false;
                 }
-            }
-
-            if (Input.touchCount == 2)
-            {
-                Debug.Log("Scaling Unit");
-                var touchZeroPrevPos = Input.touches[0].position - Input.touches[0].deltaPosition;
-                var touchOnePrevPos = Input.touches[1].position - Input.touches[1].deltaPosition;
-                
-                var prevTouchDistance = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-                var curTouchDistance = (Input.touches[0].position - Input.touches[1].position).magnitude;
-
-                var magDiff = prevTouchDistance - curTouchDistance;
-
-                transform.localScale += Vector3.one * magDiff;
             }
         }
     }
@@ -87,16 +73,6 @@ public class SquareControl : UnitBehaviour
     }
 
     public override void Rotate()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void OnSelect()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void OnDeselect()
     {
         throw new System.NotImplementedException();
     }

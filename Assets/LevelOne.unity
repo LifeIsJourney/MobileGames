@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 819773626}
   - component: {fileID: 819773625}
   - component: {fileID: 819773624}
+  - component: {fileID: 819773628}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Floor
@@ -449,6 +450,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &819773628
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819773623}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.00001
+  m_BaseOffset: 1.110223e-16
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &961312777
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +485,7 @@ GameObject:
   - component: {fileID: 961312780}
   - component: {fileID: 961312779}
   - component: {fileID: 961312783}
+  - component: {fileID: 961312778}
   m_Layer: 0
   m_Name: CubeTwo
   m_TagString: SelectableUnit
@@ -469,6 +493,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &961312778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961312777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921889b9b8a515b418366649ffa05e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedUnit: {fileID: 0}
+  cubeMoveSpeed: 1
 --- !u!65 &961312779
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -654,6 +692,7 @@ GameObject:
   - component: {fileID: 1782268402}
   - component: {fileID: 1782268401}
   - component: {fileID: 1782268406}
+  - component: {fileID: 1782268405}
   m_Layer: 0
   m_Name: CubeOne
   m_TagString: SelectableUnit
@@ -734,6 +773,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1782268405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782268400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 921889b9b8a515b418366649ffa05e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedUnit: {fileID: 0}
+  cubeMoveSpeed: 1
 --- !u!195 &1782268406
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("Camera Start()");
         _camera = GetComponent<Camera>();
         _fieldOfView = _camera.fieldOfView;
     }
@@ -61,12 +62,6 @@ public class CameraController : MonoBehaviour
                     Debug.Log("Zooming Camera");
                     ZoomCamera(Input.touches[0], Input.touches[1]);
                 }
-
-                if (Input.touches[0].phase == TouchPhase.Moved)
-                {
-                    Debug.Log("Rotating Camera");
-                    RotateCamera(Input.touches[0], Input.touches[1]);
-                }
             }
         }
         else // If a unit is selected
@@ -81,7 +76,6 @@ public class CameraController : MonoBehaviour
                 if (Input.touches[0].phase == TouchPhase.Moved)
                 {
                     _hasMoved = true;
-                    // TODO: Move The Object
                 }
                 
                 if (!_hasMoved && Input.touches[0].phase == TouchPhase.Ended &&
@@ -89,31 +83,26 @@ public class CameraController : MonoBehaviour
                 {
                     if (_rayHit.transform.CompareTag("SelectableUnit")) // If it hits a selectable unit
                     {
-                        var objectHit = _rayHit.transform.gameObject;
+                        var objectHit = _rayHit.transform.gameObject; // Save the hit object
                         
-                        if (selectedUnit.transform.name == objectHit.transform.name)
+                        if (selectedUnit.transform.name == objectHit.transform.name) // If the currently selected unit is the same as the hit object
                         {
                             Debug.Log("Same Object - Deselecting");
                             
-                            selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
-                            selectedUnit = null;
+                            selectedUnit.transform.Find("Marker").gameObject.SetActive(false); // Deactivate unit marker
+                            selectedUnit = null; // Set currently selected unit to null
                         }
-                        else
+                        else // If a new unit is hit
                         {
                             Debug.Log("Not Same Object - Switching Object");
                             
-                            selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
-                            selectedUnit = null;
+                            selectedUnit.transform.Find("Marker").gameObject.SetActive(false); // Set current unit marker to false
+                            selectedUnit = null; // Set currently selected unit to null
 
-                            selectedUnit = objectHit;
-                            selectedUnit.transform.Find("Marker").gameObject.SetActive(true);
+                            selectedUnit = objectHit; // Set selected unit to the newly hit unit
+                            selectedUnit.transform.Find("Marker").gameObject.SetActive(true); // Set the marker to true
                         }
                     }
-                }
-                else if (!_rayHit.collider) // If the ray doesn't hit anything
-                {
-                    selectedUnit.transform.Find("Marker").gameObject.SetActive(false);
-                    selectedUnit = null;
                 }
             }
         }
@@ -124,9 +113,9 @@ public class CameraController : MonoBehaviour
      */
     private void PanCamera(Vector3 newTouchPosition)
     {
-        var touchDeltaPosition = Input.touches[0].deltaPosition;
+        var touchDeltaPosition = Input.touches[0].deltaPosition; // Get position since last change
         transform.Translate(-touchDeltaPosition.x * panSpeed * Time.deltaTime,
-            0, -touchDeltaPosition.y * panSpeed * Time.deltaTime);
+            0, -touchDeltaPosition.y * panSpeed * Time.deltaTime); // Move camera around x and z axis
 
         /*
         var offset = _camera.ScreenToViewportPoint(_prevTouchPos - newTouchPosition);
@@ -163,6 +152,6 @@ public class CameraController : MonoBehaviour
      */
     private void RotateCamera(Touch touchZero, Touch touchOne)
     {
-        transform.Rotate(0, Input.touches[0].deltaPosition.x * rotateSpeed, 0, Space.World);
+        // transform.Rotate(0, Input.touches[0].deltaPosition.x * rotateSpeed, 0, Space.World);
     }
 }
