@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
 public class CameraController : MonoBehaviour
@@ -56,13 +57,7 @@ public class CameraController : MonoBehaviour
 
             if (Input.touchCount == 2)
             {
-                // TODO: Differentiate Between Pinch and Rotate
-                Debug.Log("Two Fingers Touched - Nothing Selected");
-                if (Input.touches[0].phase == TouchPhase.Moved && Input.touches[1].phase == TouchPhase.Moved)
-                {
-                    Debug.Log("Zooming Camera");
-                    ZoomCamera(Input.touches[0], Input.touches[1]);
-                }
+                ZoomRotate();
             }
         }
         else // If a unit is selected
@@ -151,5 +146,31 @@ public class CameraController : MonoBehaviour
     private void RotateCamera(Touch touchZero, Touch touchOne)
     {
         // transform.Rotate(0, Input.touches[0].deltaPosition.x * rotateSpeed, 0, Space.World);
+    }
+    
+    /*
+     * Method for Handling Zoom and Rotate
+     */
+    private void ZoomRotate()
+    {
+        var pinchAmount = 0f;
+        var desiredRotation = transform.rotation;
+        
+        DetectZoomRotate.Calculate();
+
+        if (Mathf.Abs(DetectZoomRotate.PinchDistDelta) > 0)
+        {
+            pinchAmount = DetectZoomRotate.PinchDistDelta;
+        }
+
+        if (Mathf.Abs(DetectZoomRotate.TurnAngleDelta) > 0)
+        {
+            var rotationDeg = Vector3.zero;
+            rotationDeg.z = -DetectZoomRotate.TurnAngleDelta;
+            desiredRotation *= Quaternion.Euler(rotationDeg);
+        }
+
+        transform.rotation = desiredRotation;
+        transform.position = Vector3.forward * pinchAmount;
     }
 }
