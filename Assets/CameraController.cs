@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
@@ -8,13 +9,20 @@ public class CameraController : MonoBehaviour
     public GameObject selectedUnit;
     public float panSpeed = 0.1f;
     public float zoomSpeed = 0.1f;
-    public float rotateSpeed = 1f;
+    public float rotateSpeed = 0.1f;
 
     private RaycastHit _rayHit;
     private Camera _camera;
     private float _fieldOfView;
     private bool _hasMoved;
     private Vector3 _panInitPos;
+    
+    private const float PinchThreshold = 0.3f;
+    private const float RotationThreshold = 20f;
+
+    private float _pinchDistDelta; // delta distance between distancing touch points
+    private float _initPinchDist; // initial distance between distancing touches
+    private static Vector3 _initRotation;
 
     private void Start()
     {
@@ -113,7 +121,7 @@ public class CameraController : MonoBehaviour
         var deltaPanPos = _camera.ScreenToViewportPoint(curPanPos - _panInitPos); // Difference between current and initial position
         deltaPanPos = -deltaPanPos; // Inverts the camera pan direction
 
-        var moveCamera = new Vector3(deltaPanPos.x * panSpeed, 0, deltaPanPos.y * panSpeed); // How the camera will be panned
+        var moveCamera = new Vector3(deltaPanPos.x * panSpeed/50, 0, deltaPanPos.y * panSpeed); // How the camera will be panned
         
         transform.Translate(moveCamera, Space.World); // Pan the camera
     }
@@ -153,24 +161,39 @@ public class CameraController : MonoBehaviour
      */
     private void ZoomRotate()
     {
-        var pinchAmount = 0f;
-        var desiredRotation = transform.rotation;
-        
-        DetectZoomRotate.Calculate();
+        var touchZero = Input.touches[0];
+        var touchOne = Input.touches[1];
 
-        if (Mathf.Abs(DetectZoomRotate.PinchDistDelta) > 0)
+        if (touchZero.phase == TouchPhase.Began || touchOne.phase == TouchPhase.Began)
         {
-            pinchAmount = DetectZoomRotate.PinchDistDelta;
+            _initPinchDist = Vector3.Distance(touchZero.position, touchOne.position);
+            _initRotation = touchZero.position - touchOne.position;
         }
-
-        if (Mathf.Abs(DetectZoomRotate.TurnAngleDelta) > 0)
+            
+        if (touchZero.phase == TouchPhase.Moved || touchOne.phase == TouchPhase.Moved)
         {
-            var rotationDeg = Vector3.zero;
-            rotationDeg.z = -DetectZoomRotate.TurnAngleDelta;
-            desiredRotation *= Quaternion.Euler(rotationDeg);
-        }
+            var newPinchDist = Vector3.Distance(touchZero.position, touchOne.position);
+            _pinchDistDelta = newPinchDist - _initPinchDist; // save pinch difference
 
-        transform.rotation = desiredRotation;
-        transform.position = Vector3.forward * pinchAmount;
+            var rotationVector = touchZero.position - touchOne.position;
+            var rotationAngle = Vector3.Angle(rotationVector, _initRotation);
+            var cross = Vector3.Cross(_initRotation, rotationVector);
+
+            if (rotationAngle > RotationThreshold)
+            {
+                if (cross.z > 0)
+                {
+                    transform.Rotate(0f, rotateSpeed/60 * rotationAngle, 0f, Space.World);
+                }
+                else if (cross.z < 0)
+                {
+                    transform.Rotate(0f, rotateSpeed/60 * -rotationAngle, 0f, Space.World);
+                }
+            }
+            else if (Math.Abs(_pinchDistDelta) >= PinchThreshold)
+            {
+                ZoomCamera(touchZero, touchOne);
+            }
+        }
     }
 }
