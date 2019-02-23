@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Accelerometer.cs" />
     <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\Gyro.cs" />
     <Compile Include="Assets\SquareControl.cs" />

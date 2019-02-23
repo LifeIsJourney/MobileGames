@@ -63,9 +63,6 @@ public class CameraController : MonoBehaviour
                     ZoomCamera(Input.touches[0], Input.touches[1]);
                 }
             }
-            
-            // Enable gyroscope
-            Gyroscope();
         }
         else // If a unit is selected
         {
