@@ -8,5 +8,6 @@ public abstract class UnitBehaviour : MonoBehaviour
 {
     public abstract void Move();
     public abstract void Scale();
-    public abstract void Rotate();
+    public abstract void Rotate(float rotationAngle);
+    public abstract void ScaleOrRotate();
 }

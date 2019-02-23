@@ -121,7 +121,7 @@ public class CameraController : MonoBehaviour
         var deltaPanPos = _camera.ScreenToViewportPoint(curPanPos - _panInitPos); // Difference between current and initial position
         deltaPanPos = -deltaPanPos; // Inverts the camera pan direction
 
-        var moveCamera = new Vector3(deltaPanPos.x * panSpeed/50, 0, deltaPanPos.y * panSpeed); // How the camera will be panned
+        var moveCamera = new Vector3(deltaPanPos.x * panSpeed, 0, deltaPanPos.y * panSpeed); // How the camera will be panned
         
         transform.Translate(moveCamera, Space.World); // Pan the camera
     }
@@ -151,9 +151,9 @@ public class CameraController : MonoBehaviour
     /*
      * Method for Rotating Camera
      */
-    private void RotateCamera(Touch touchZero, Touch touchOne)
+    private void RotateCamera(float rotationAngle)
     {
-        // transform.Rotate(0, Input.touches[0].deltaPosition.x * rotateSpeed, 0, Space.World);
+        transform.Rotate(0f, rotateSpeed/60 * rotationAngle, 0f, Space.World);
     }
     
     /*
@@ -183,11 +183,11 @@ public class CameraController : MonoBehaviour
             {
                 if (cross.z > 0)
                 {
-                    transform.Rotate(0f, rotateSpeed/60 * rotationAngle, 0f, Space.World);
+                    RotateCamera(rotationAngle);
                 }
                 else if (cross.z < 0)
                 {
-                    transform.Rotate(0f, rotateSpeed/60 * -rotationAngle, 0f, Space.World);
+                    RotateCamera(-rotationAngle);
                 }
             }
             else if (Math.Abs(_pinchDistDelta) >= PinchThreshold)

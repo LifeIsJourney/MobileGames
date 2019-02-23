@@ -1,27 +1,30 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.AI;
 
 public class SquareControl : UnitBehaviour
 {
     public float scaleSpeed = 0.1f;
+    public float rotateSpeed = 0.1f;
     
     private CameraController _cameraController;
-    private RaycastHit _hit; // RaycastHit variable
+    private RaycastHit _hit; // RayCastHit variable
     private Camera _mainCamera; // Main camera variable
-    private float _fieldOfView; // Camera field of view
     private bool _isRotating; // Track if unit is rotating
     private bool _isDragging; // Track if unit is being dragged
-    private Vector3 _currentDragPos;
+    
+    private const float PinchThreshold = 0.3f;
+    private const float RotationThreshold = 20f;
+
+    private float _pinchDistDelta; // delta distance between distancing touch points
+    private float _initPinchDist; // initial distance between distancing touches
+    private static Vector3 _initRotation;
 
     void Start()
     {
         Debug.Log("Unit Start()");
         _mainCamera = Camera.main; // Assign camera variable
-        if (_mainCamera != null)
-        {
-            _fieldOfView = _mainCamera.fieldOfView;
-            _cameraController = _mainCamera.GetComponent<CameraController>(); // Assign camera controller
-        }
+        if (_mainCamera != null) _cameraController = _mainCamera.GetComponent<CameraController>(); // Assign camera controller
     }
 
     void Update()
@@ -31,7 +34,6 @@ public class SquareControl : UnitBehaviour
         {
             if (Input.touchCount == 1) // If one finger is touch
             {
-                _currentDragPos = Input.GetTouch(0).position;
                 if (Input.touches[0].phase == TouchPhase.Began &&
                     Physics.Raycast(_mainCamera.ScreenPointToRay(Input.touches[0].position), out _hit)
                 ) // If touch phase is began and it hits a unit
@@ -63,7 +65,7 @@ public class SquareControl : UnitBehaviour
 
             if (Input.touchCount == 2)
             {
-                Scale();
+                ScaleOrRotate();
             }
         }
     }
@@ -77,6 +79,44 @@ public class SquareControl : UnitBehaviour
 
         position = Vector3.Lerp(position, newPos, 5f);
         _cameraController.selectedUnit.transform.position = position;
+    }
+    
+    public override void ScaleOrRotate()
+    {
+        var touchZero = Input.touches[0];
+        var touchOne = Input.touches[1];
+
+        if (touchZero.phase == TouchPhase.Began || touchOne.phase == TouchPhase.Began)
+        {
+            _initPinchDist = Vector3.Distance(touchZero.position, touchOne.position);
+            _initRotation = touchZero.position - touchOne.position;
+        }
+            
+        if (touchZero.phase == TouchPhase.Moved || touchOne.phase == TouchPhase.Moved)
+        {
+            var newPinchDist = Vector3.Distance(touchZero.position, touchOne.position);
+            _pinchDistDelta = newPinchDist - _initPinchDist; // save pinch difference
+
+            var rotationVector = touchZero.position - touchOne.position;
+            var rotationAngle = Vector3.Angle(rotationVector, _initRotation);
+            var cross = Vector3.Cross(_initRotation, rotationVector);
+
+            if (rotationAngle > RotationThreshold)
+            {
+                if (cross.z > 0)
+                {
+                    Rotate(rotationAngle);
+                }
+                else if (cross.z < 0)
+                {
+                    Rotate(-rotationAngle);
+                }
+            }
+            else if (Math.Abs(_pinchDistDelta) >= PinchThreshold)
+            {
+                Scale();
+            }
+        }
     }
 
     public override void Scale()
@@ -99,8 +139,8 @@ public class SquareControl : UnitBehaviour
         _cameraController.selectedUnit.transform.localScale += Vector3.one * magDiff * scaleSpeed;
     }
 
-    public override void Rotate()
+    public override void Rotate(float rotationAngle)
     {
-        throw new System.NotImplementedException();
+        _cameraController.selectedUnit.transform.Rotate(0f, rotateSpeed * rotationAngle, 0f, Space.World);
     }
 }
