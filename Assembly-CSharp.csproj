@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\Gyro.cs" />
     <Compile Include="Assets\SquareControl.cs" />
     <Compile Include="Assets\UnitBehaviour.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

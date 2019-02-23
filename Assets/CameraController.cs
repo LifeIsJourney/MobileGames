@@ -12,11 +12,6 @@ public class CameraController : MonoBehaviour
     private float _fieldOfView;
     private bool _hasMoved;
     
-    private bool _gyroEnabled;
-    private Gyroscope _gyroscope;
-    private GameObject _cameraContainer;
-    private Quaternion _rotation;
-    
     // private Vector3 _prevTouchPos;
 
     private void Start()
@@ -24,8 +19,6 @@ public class CameraController : MonoBehaviour
         Debug.Log("Camera Start()");
         _camera = GetComponent<Camera>();
         _fieldOfView = _camera.fieldOfView;
-        _cameraContainer = new GameObject("Camera Container");
-        _cameraContainer.transform.position = transform.position;
     }
 
     void Update()
@@ -163,37 +156,5 @@ public class CameraController : MonoBehaviour
     private void RotateCamera(Touch touchZero, Touch touchOne)
     {
         // transform.Rotate(0, Input.touches[0].deltaPosition.x * rotateSpeed, 0, Space.World);
-    }
-    
-    /*
-     * Method for Enabling Gyroscope
-     */
-    private bool EnableGyro()
-    {
-        if (SystemInfo.supportsGyroscope)
-        {
-            _gyroscope = Input.gyro;
-            _gyroEnabled = true;
-            
-            _cameraContainer.transform.rotation = Quaternion.Euler(90f, 90f, 0f);
-            _rotation = new Quaternion(0, 0, 1, 0);
-            
-            return true;
-        }
-
-        return false;
-    }
-    
-    /*
-     * Gyroscope Method
-     */
-    private void Gyroscope()
-    {
-        transform.SetParent(_cameraContainer.transform);
-        _gyroEnabled = EnableGyro();
-        if (_gyroEnabled)
-        {
-            transform.localRotation = _gyroscope.attitude * _rotation;
-        }
     }
 }
