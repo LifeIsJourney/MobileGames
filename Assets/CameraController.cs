@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Numerics;
+using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 public class CameraController : MonoBehaviour
 {
     public GameObject selectedUnit;
-    public float panSpeed = 10f;
+    public float panSpeed = 0.1f;
     public float zoomSpeed = 0.1f;
     public float rotateSpeed = 1f;
 
@@ -11,8 +13,7 @@ public class CameraController : MonoBehaviour
     private Camera _camera;
     private float _fieldOfView;
     private bool _hasMoved;
-    
-    // private Vector3 _prevTouchPos;
+    private Vector3 _panInitPos;
 
     private void Start()
     {
@@ -30,8 +31,8 @@ public class CameraController : MonoBehaviour
                 Debug.Log("One Finger Touched - Nothing Selected");
                 if (Input.touches[0].phase == TouchPhase.Began)
                 {
-                    // _prevTouchPos = Input.touches[0].position;
                     _hasMoved = false;
+                    _panInitPos = Input.touches[0].position; // Get initial pan position on each began
                 }
 
                 if (Input.touches[0].phase == TouchPhase.Moved)
@@ -113,16 +114,13 @@ public class CameraController : MonoBehaviour
      */
     private void PanCamera(Vector3 newTouchPosition)
     {
-        var touchDeltaPosition = Input.touches[0].deltaPosition; // Get position since last change
-        transform.Translate(-touchDeltaPosition.x * panSpeed * Time.deltaTime,
-            0, -touchDeltaPosition.y * panSpeed * Time.deltaTime); // Move camera around x and z axis
+        var curPanPos = newTouchPosition; // The current pan position will equal to new touch position on moved
+        var deltaPanPos = _camera.ScreenToViewportPoint(curPanPos - _panInitPos); // Difference between current and initial position
+        deltaPanPos = -deltaPanPos; // Inverts the camera pan direction
 
-        /*
-        var offset = _camera.ScreenToViewportPoint(_prevTouchPos - newTouchPosition);
-        var move = new Vector3(offset.x * panSpeed, 0, offset.y * panSpeed);
-        transform.Translate(move, Space.World);
-        _prevTouchPos = newTouchPosition;
-        */
+        var moveCamera = new Vector3(deltaPanPos.x * panSpeed, 0, deltaPanPos.y * panSpeed); // How the camera will be panned
+        
+        transform.Translate(moveCamera, Space.World); // Pan the camera
     }
 
     /*
