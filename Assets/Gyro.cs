@@ -27,8 +27,9 @@ public class Gyro : MonoBehaviour
             _gyroscope = Input.gyro; // assign gyro
             _gyroscope.enabled = true; // enable the gyro
             
+            // set up rotation details and point camera in front of us on start
             _cameraContainer.transform.rotation = Quaternion.Euler(90f, 90f, 0);
-            _rotation = new Quaternion(0, 0, 1, 0); // points in front of us on start
+            _rotation = new Quaternion(0, 0, 1, 0);
             
             return true;
         }
