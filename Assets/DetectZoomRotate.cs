@@ -11,27 +11,30 @@ public class DetectZoomRotate : MonoBehaviour
     private const float MinPinchDist = 0;
 
     public static float TurnAngleDelta; // delta angle between touch points
-    public static float TurnAngle; // angle between touch points
+    public static float InitTurnAngle; // initial angle between touch points
     public static float PinchDistDelta; // delta distance between distancing touch points
-    public static float PinchDist; // distance between distancing touches
+    public static float InitPinchDist; // initial distance between distancing touches
 
     public static void Calculate()
     {
-        PinchDist = PinchDistDelta = 0;
-        TurnAngle = TurnAngleDelta = 0;
+        InitPinchDist = PinchDistDelta = 0;
+        InitTurnAngle = TurnAngleDelta = 0;
 
         if (Input.touchCount == 2)
         {
             var touchZero = Input.touches[0];
             var touchOne = Input.touches[1];
 
+            if (touchZero.phase == TouchPhase.Began || touchOne.phase == TouchPhase.Began)
+            {
+                InitPinchDist = Vector3.Distance(touchZero.position, touchOne.position);
+                InitTurnAngle = Angle(touchZero.position, touchOne.position);
+            }
+            
             if (touchZero.phase == TouchPhase.Moved || touchOne.phase == TouchPhase.Moved)
             {
-                PinchDist = Vector2.Distance(touchZero.position, touchOne.position); // distance between touches
-                var prevDist = Vector2.Distance(touchZero.position - touchZero.deltaPosition,
-                    touchOne.position - touchOne.deltaPosition); // distance between previous touches
-
-                PinchDistDelta = PinchDist - prevDist; // save pinch difference
+                var newPinchDist = Vector3.Distance(touchZero.position, touchOne.position);
+                PinchDistDelta = newPinchDist - InitPinchDist; // save pinch difference
 
                 if (Mathf.Abs(PinchDistDelta) > MinPinchDist) // if greater than min threshold
                 {
@@ -39,13 +42,11 @@ public class DetectZoomRotate : MonoBehaviour
                 }
                 else
                 {
-                    PinchDist = PinchDistDelta = 0; // reset the pinch distances to 0
+                    InitPinchDist = PinchDistDelta = 0; // reset the pinch distances to 0
                 }
 
-                TurnAngle = Angle(touchZero.position, touchOne.position); // angle between touches
-                var prevTurnAngle = Angle(touchZero.position - touchZero.deltaPosition,
-                    touchOne.position - touchOne.deltaPosition); // angle between previous touches
-                TurnAngleDelta = Mathf.DeltaAngle(prevTurnAngle, TurnAngle); // difference between angles
+                var newTurnAngle = Angle(touchZero.position, touchOne.position); // angle between previous touches
+                TurnAngleDelta = newTurnAngle - InitTurnAngle; // difference between angles
 
                 if (Mathf.Abs(TurnAngleDelta) > MinTurnAngle) // if greater than minimum turn angle
                 {
@@ -53,7 +54,7 @@ public class DetectZoomRotate : MonoBehaviour
                 }
                 else
                 {
-                    TurnAngle = TurnAngleDelta = 0; // reset the angles to 0
+                    InitTurnAngle = TurnAngleDelta = 0; // reset the angles to 0
                 }
             }
         }
