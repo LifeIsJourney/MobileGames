@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine.Advertisements;
 using UnityEngine;
 
@@ -33,19 +32,24 @@ public class AdManager : MonoBehaviour
         {
             case ShowResult.Finished:
                 Debug.Log("Added 5 Gems to Account");
+                Currency.AddGems(5);
                 break;
             case ShowResult.Skipped:
                 Debug.Log("Player Skipped Ad");
+                Currency.AddGems(1);
                 break;
             case ShowResult.Failed:
                 Debug.Log("Player Failed to Launch Ad - Internet?");
                 break;
+            default:
+                Debug.Log("Show Result Not Handled");
+                break;
         }
     }
-    
-    IEnumerator WaitForAd()
+
+    static IEnumerator WaitForAd()
     {
-        float currentTimeScale = Time.timeScale;
+        var currentTimeScale = Time.timeScale;
         Time.timeScale = 0f;
         yield return null;
 

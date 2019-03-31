@@ -60,6 +60,7 @@
     <Compile Include="Assets\Accelerometer.cs" />
     <Compile Include="Assets\AdManager.cs" />
     <Compile Include="Assets\CameraController.cs" />
+    <Compile Include="Assets\Currency.cs" />
     <Compile Include="Assets\Gyro.cs" />
     <Compile Include="Assets\SquareControl.cs" />
     <Compile Include="Assets\UnitBehaviour.cs" />
