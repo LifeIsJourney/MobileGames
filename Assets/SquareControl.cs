@@ -25,6 +25,7 @@ public class SquareControl : UnitBehaviour
         Debug.Log("Unit Start()");
         _mainCamera = Camera.main; // Assign camera variable
         if (_mainCamera != null) _cameraController = _mainCamera.GetComponent<CameraController>(); // Assign camera controller
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 
     void Update()
