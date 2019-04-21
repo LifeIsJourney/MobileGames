@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b653e79a-6207-4330-961b-68f4df47d901" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/SphereControl.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <marker date="1554085156327" expanded="true" signature="6:78" ph="..." />
+                <marker date="1554085156327" expanded="true" signature="122:499" ph="{...}" />
+                <marker date="1554085156327" expanded="true" signature="186:301" ph="{...}" />
+                <marker date="1554085156327" expanded="true" signature="324:497" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/SquareControl.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+              <folding>
+                <marker date="1554086519742" expanded="false" signature="6:54" ph="..." />
+                <marker date="1554086519742" expanded="true" signature="98:5324" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="785:1074" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="1093:2662" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="1249:2656" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="1324:2545" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="1571:1845" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="1687:1827" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="2031:2256" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="2117:2238" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="2404:2531" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="2585:2646" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="2696:2972" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="3018:4320" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="3195:3369" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="3469:4314" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="3927:4185" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="3974:4053" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="4091:4171" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="4251:4304" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="4354:5149" ph="{...}" />
+                <marker date="1554086519742" expanded="true" signature="5203:5322" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Accelerometer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Gyro.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnitBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AdManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Currency.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelOne/NavMesh.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelOne/NavMesh.asset.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelOne.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelOne.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SquareControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SphereControl.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/DetectTouchMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/CubeControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/CamZoom.cs" />
+        <option value="$PROJECT_DIR$/Assets/SelectObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Manipulation.cs" />
+        <option value="$PROJECT_DIR$/Assets/ObjectManipulation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Cube.cs" />
+        <option value="$PROJECT_DIR$/Assets/UnitBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/SelectUnit.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Unit.cs" />
+        <option value="$PROJECT_DIR$/Assets/AdManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Currency.cs" />
+        <option value="$PROJECT_DIR$/Assets/SphereControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/SquareControl.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="725" />
+    <option name="y" value="15" />
+    <option name="width" value="1184" />
+    <option name="height" value="1006" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b653e79a-6207-4330-961b-68f4df47d901" name="Default Changelist" comment="" />
+      <created>1550163909073</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550163909073</updated>
+      <workItem from="1550163920356" duration="1074000" />
+      <workItem from="1550169198107" duration="6664000" />
+      <workItem from="1550178346101" duration="2490000" />
+      <workItem from="1550196418128" duration="3153000" />
+      <workItem from="1550199712844" duration="157000" />
+      <workItem from="1550241564118" duration="28271000" />
+      <workItem from="1550513808774" duration="2435000" />
+      <workItem from="1554055402489" duration="2393000" />
+      <workItem from="1554059333711" duration="5198000" />
+    </task>
+    <task id="LOCAL-00001" summary="added camera zoom code">
+      <created>1550170261135</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1550170261135</updated>
+    </task>
+    <task id="LOCAL-00002" summary="one finger now rotates an object regardless of selecting it before or not">
+      <created>1550171723203</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550171723203</updated>
+    </task>
+    <task id="LOCAL-00003" summary="camera can now pan, although not happy with the result">
+      <created>1550179033452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1550179033452</updated>
+    </task>
+    <task id="LOCAL-00004" summary="now has two methods of panning the camera: simple/complex&#10;updated complex method using position method of GetTouch rather than touches[] array">
+      <created>1550180650846</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550180650846</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cube now changes color on Tap&#10;Added green and red material&#10;Created cube script">
+      <created>1550290410780</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1550290410780</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added code to try and move the cube&#10;Added methods to cube script">
+      <created>1550329834212</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1550329834213</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created floor material&#10;Created manipulation interface&#10;Created objectmanipulation implementation">
+      <created>1550330085208</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1550330085208</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created Select Unit Script&#10;Created Unit Script&#10;Added Navigation Mesh to plane&#10;Created floor material&#10;Added embedded cube objects to notify if selected">
+      <created>1550340580681</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1550340580681</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added navmesh files&#10;Added blue material files&#10;cameracontrol reverted back to zoom and pan only&#10;cube script replaced with unit script&#10;selectunit handles selecting on selectable objects only&#10;unit class can now move objects to different positions">
+      <created>1550345616565</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1550345616565</updated>
+    </task>
+    <task id="LOCAL-00010" summary="removed object manipulation files">
+      <created>1550345714198</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1550345714198</updated>
+    </task>
+    <task id="LOCAL-00011" summary="deselect object if ray hits nothing">
+      <created>1550347591378</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550347591378</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added is rotating bool to stop cube from moving when rotating, doesn't work">
+      <created>1550348353709</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1550348353709</updated>
+    </task>
+    <task id="LOCAL-00013" summary="test advertisements integrated">
+      <created>1554058799864</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1554058799864</updated>
+    </task>
+    <task id="LOCAL-00014" summary="test advertisements integrated">
+      <created>1554059392154</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554059392154</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added game currency&#10;currency added on ad watches">
+      <created>1554060749469</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1554060749469</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated game to larger scale&#10;Added sphere (chaser) which chases the cube you move">
+      <created>1554085943926</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1554085943926</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Changed skybox">
+      <created>1554086053965</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1554086053965</updated>
+    </task>
+    <task id="LOCAL-00018" summary="rebaked navmeshagent">
+      <created>1554086350447</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1554086350447</updated>
+    </task>
+    <task id="LOCAL-00019" summary="stopped cube sliding when not touching&#10;set rigidbody kinematic to true">
+      <created>1554086584680</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1554086584680</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="51835000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="725" y="15" width="1184" height="1006" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1752669" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" weight="0.32890365" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" weight="0.3272311" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="added camera zoom code" />
+    <MESSAGE value="one finger now rotates an object regardless of selecting it before or not" />
+    <MESSAGE value="camera can now pan, although not happy with the result" />
+    <MESSAGE value="now has two methods of panning the camera: simple/complex&#10;updated complex method using position method of GetTouch rather than touches[] array" />
+    <MESSAGE value="Cube now changes color on Tap&#10;Added green and red material&#10;Created cube script" />
+    <MESSAGE value="Added code to try and move the cube&#10;Added methods to cube script" />
+    <MESSAGE value="Created floor material&#10;Created manipulation interface&#10;Created objectmanipulation implementation" />
+    <MESSAGE value="Created Select Unit Script&#10;Created Unit Script&#10;Added Navigation Mesh to plane&#10;Created floor material&#10;Added embedded cube objects to notify if selected" />
+    <MESSAGE value="Added navmesh files&#10;Added blue material files&#10;cameracontrol reverted back to zoom and pan only&#10;cube script replaced with unit script&#10;selectunit handles selecting on selectable objects only&#10;unit class can now move objects to different positions" />
+    <MESSAGE value="removed object manipulation files" />
+    <MESSAGE value="deselect object if ray hits nothing" />
+    <MESSAGE value="added is rotating bool to stop cube from moving when rotating, doesn't work" />
+    <MESSAGE value="test advertisements integrated" />
+    <MESSAGE value="added game currency&#10;currency added on ad watches" />
+    <MESSAGE value="Updated game to larger scale&#10;Added sphere (chaser) which chases the cube you move" />
+    <MESSAGE value="Changed skybox" />
+    <MESSAGE value="rebaked navmeshagent" />
+    <MESSAGE value="stopped cube sliding when not touching&#10;set rigidbody kinematic to true" />
+    <option name="LAST_COMMIT_MESSAGE" value="stopped cube sliding when not touching&#10;set rigidbody kinematic to true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/DetectTouchMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/CubeControl.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/CamZoom.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/SelectObject.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Manipulation.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/ObjectManipulation.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Cube.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/CameraControl.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Unit.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/SelectUnit.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/UnitBehaviour.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <marker date="1553665391260" expanded="true" signature="0:80" ph="/* Defines default behaviour methods each unit must implement and perform ... */" />
+            <marker date="1553665391260" expanded="true" signature="153:320" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Currency.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding>
+            <marker date="1554060679763" expanded="true" signature="57:478" ph="{...}" />
+            <marker date="1554060679763" expanded="true" signature="173:237" ph="{...}" />
+            <marker date="1554060679763" expanded="true" signature="263:476" ph="{...}" />
+            <marker date="1554060679763" expanded="true" signature="293:470" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/CameraController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1155">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <marker date="1553667216065" expanded="false" signature="6:135" ph="..." />
+            <marker date="1553667216065" expanded="true" signature="182:7735" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="816:951" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="970:4559" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="1042:2403" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="1130:2295" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="1276:1454" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="1519:1715" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="1899:2281" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="2060:2263" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="2335:2393" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="2441:4553" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="2515:4543" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="2593:2668" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="2733:2807" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="3072:4529" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="3194:4511" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="3483:3841" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="3894:4489" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="4565:4608" ph="/* Method for Panning Camera ... */" />
+            <marker date="1553667216065" expanded="true" signature="4661:5198" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="5204:5247" ph="/* Method for Zooming Camera ... */" />
+            <marker date="1553667216065" expanded="true" signature="5308:6110" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="6116:6160" ph="/* Method for Rotating Camera ... */" />
+            <marker date="1553667216065" expanded="true" signature="6211:6302" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="6312:6365" ph="/* Method for Handling Zoom and Rotate ... */" />
+            <marker date="1553667216065" expanded="true" signature="6395:7733" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="6572:6746" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="6846:7727" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="7304:7574" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="7351:7436" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="7474:7560" ph="{...}" />
+            <marker date="1553667216065" expanded="true" signature="7640:7717" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Gyro.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <marker date="1553665391239" expanded="true" signature="20:103" ph="/* Class for enable gyroscope and allowing you to look around on your phone ... */" />
+            <marker date="1553665391239" expanded="true" signature="138:1517" ph="{...}" />
+            <marker date="1553665391239" expanded="true" signature="387:758" ph="{...}" />
+            <marker date="1553665391239" expanded="true" signature="789:1321" ph="{...}" />
+            <marker date="1553665391239" expanded="true" signature="864:1258" ph="{...}" />
+            <marker date="1553665391239" expanded="true" signature="1348:1515" ph="{...}" />
+            <marker date="1553665391239" expanded="true" signature="1380:1509" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Accelerometer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <marker date="1553665391234" expanded="true" signature="0:35" ph="/* Script for enabling tilt ... */" />
+            <marker date="1553665391234" expanded="true" signature="99:543" ph="{...}" />
+            <marker date="1553665391234" expanded="true" signature="191:251" ph="{...}" />
+            <marker date="1553665391234" expanded="true" signature="278:541" ph="{...}" />
+            <marker date="1553665391234" expanded="true" signature="344:418" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/AdManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding>
+            <marker date="1554060113477" expanded="true" signature="6:78" ph="..." />
+            <marker date="1554060113477" expanded="true" signature="118:1517" ph="{...}" />
+            <marker date="1554060113477" expanded="true" signature="208:268" ph="{...}" />
+            <marker date="1554060113477" expanded="true" signature="294:618" ph="{...}" />
+            <marker date="1554060113477" expanded="true" signature="423:612" ph="{...}" />
+            <marker date="1554060113477" expanded="true" signature="670:1248" ph="{...}" />
+            <marker date="1554060113477" expanded="true" signature="699:1242" ph="{...}" />
+            <marker date="1554060113477" expanded="true" signature="1284:1515" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SphereControl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <marker date="1554085156327" expanded="true" signature="6:78" ph="..." />
+            <marker date="1554085156327" expanded="true" signature="122:499" ph="{...}" />
+            <marker date="1554085156327" expanded="true" signature="186:301" ph="{...}" />
+            <marker date="1554085156327" expanded="true" signature="324:497" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SquareControl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="53" lean-forward="true" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <marker date="1554086519742" expanded="false" signature="6:54" ph="..." />
+            <marker date="1554086519742" expanded="true" signature="98:5324" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="785:1074" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="1093:2662" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="1249:2656" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="1324:2545" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="1571:1845" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="1687:1827" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="2031:2256" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="2117:2238" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="2404:2531" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="2585:2646" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="2696:2972" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="3018:4320" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="3195:3369" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="3469:4314" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="3927:4185" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="3974:4053" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="4091:4171" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="4251:4304" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="4354:5149" ph="{...}" />
+            <marker date="1554086519742" expanded="true" signature="5203:5322" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

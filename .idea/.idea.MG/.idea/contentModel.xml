@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Aldo\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Aldo\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_MG.-240681282.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Aldo\Desktop\MobileGames" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Accelerometer.cs" t="Include" />
+        <e p="AdManager.cs" t="Include" />
+        <e p="CameraController.cs" t="Include" />
+        <e p="Currency.cs" t="Include" />
+        <e p="Gyro.cs" t="Include" />
+        <e p="SphereControl.cs" t="Include" />
+        <e p="SquareControl.cs" t="Include" />
+        <e p="UnitBehaviour.cs" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="MG.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
