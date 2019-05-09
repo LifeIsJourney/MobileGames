@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="86bb3b41-472f-45d4-a2f5-c46d92a4dc01" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Currency.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelOne.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelOne.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SphereControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SphereControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,17 +17,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/SphereControl.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/ScoreControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state relative-caret-position="282">
+              <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
               <folding>
-                <marker date="1557419628538" expanded="true" signature="62:652" ph="{...}" />
-                <marker date="1557419628538" expanded="true" signature="126:241" ph="{...}" />
-                <marker date="1557419628538" expanded="true" signature="264:437" ph="{...}" />
-                <marker date="1557419628538" expanded="true" signature="489:650" ph="{...}" />
-                <marker date="1557419628538" expanded="true" signature="543:644" ph="{...}" />
+                <marker date="1557425985352" expanded="false" signature="6:100" ph="..." />
+                <marker date="1557425985352" expanded="true" signature="143:1016" ph="{...}" />
+                <marker date="1557425985352" expanded="true" signature="356:660" ph="{...}" />
+                <marker date="1557425985352" expanded="true" signature="693:891" ph="{...}" />
+                <marker date="1557425985352" expanded="true" signature="753:885" ph="{...}" />
+                <marker date="1557425985352" expanded="true" signature="957:1014" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Currency.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+              <folding>
+                <marker date="1557420721457" expanded="true" signature="6:73" ph="..." />
+                <marker date="1557420721457" expanded="true" signature="112:507" ph="{...}" />
+                <marker date="1557420721457" expanded="true" signature="276:340" ph="{...}" />
+                <marker date="1557420721457" expanded="true" signature="366:505" ph="{...}" />
+                <marker date="1557420721457" expanded="true" signature="396:499" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -41,7 +57,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Accelerometer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Currency.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SphereControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScoreControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AdManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -51,7 +69,9 @@
         <option value="$PROJECT_DIR$/Assets/AdManager.cs" />
         <option value="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Assets/Currency.cs" />
         <option value="$PROJECT_DIR$/Assets/SphereControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/ScoreControl.cs" />
       </list>
     </option>
   </component>
@@ -78,6 +98,11 @@
             <path>
               <item name="" type="161ac34:FileSystemExplorerRootNode" />
               <item name="MobileGames" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="MobileGames" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Assets" type="34e6ba20:FileSystemExplorerNode" />
             </path>
           </expand>
           <select />
@@ -139,7 +164,7 @@
       <workItem from="1554936761400" duration="1879000" />
       <workItem from="1555859223132" duration="430000" />
       <workItem from="1557417676686" duration="381000" />
-      <workItem from="1557418375830" duration="887000" />
+      <workItem from="1557418375830" duration="7207000" />
     </task>
     <task id="LOCAL-00001" summary="Updated .gitignore file">
       <created>1555859350789</created>
@@ -148,11 +173,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555859350789</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Scene restarts on collision detection">
+      <created>1557419874155</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557419874155</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3639000" />
+    <option name="totallyTimeSpent" value="9959000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -164,10 +196,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="974" height="1057" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38621444" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -186,7 +217,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32875264" />
       <window_info anchor="bottom" id="Unity" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -204,7 +235,8 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated .gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore file" />
+    <MESSAGE value="Scene restarts on collision detection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scene restarts on collision detection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -217,26 +249,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/AdManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
-          <folding>
-            <marker date="1554938306757" expanded="false" signature="6:105" ph="..." />
-            <marker date="1554938306757" expanded="true" signature="145:2022" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="307:401" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="427:751" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="556:745" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="789:893" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="833:887" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="940:1123" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="1175:1753" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="1204:1747" ph="{...}" />
-            <marker date="1554938306757" expanded="true" signature="1789:2020" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Accelerometer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -271,16 +283,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/AdManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+          <folding>
+            <marker date="1554938306757" expanded="false" signature="6:105" ph="..." />
+            <marker date="1554938306757" expanded="true" signature="145:2022" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="307:401" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="427:751" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="556:745" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="789:893" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="833:887" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="940:1123" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="1175:1753" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="1204:1747" ph="{...}" />
+            <marker date="1554938306757" expanded="true" signature="1789:2020" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/SphereControl.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        <state relative-caret-position="285">
+          <caret line="19" column="105" selection-start-line="19" selection-start-column="105" selection-end-line="19" selection-end-column="105" />
           <folding>
-            <marker date="1557419628538" expanded="true" signature="62:652" ph="{...}" />
-            <marker date="1557419628538" expanded="true" signature="126:241" ph="{...}" />
-            <marker date="1557419628538" expanded="true" signature="264:437" ph="{...}" />
-            <marker date="1557419628538" expanded="true" signature="489:650" ph="{...}" />
-            <marker date="1557419628538" expanded="true" signature="543:644" ph="{...}" />
+            <marker date="1557424602418" expanded="true" signature="6:53" ph="..." />
+            <marker date="1557424602418" expanded="true" signature="97:785" ph="{...}" />
+            <marker date="1557424602418" expanded="true" signature="187:350" ph="{...}" />
+            <marker date="1557424602418" expanded="true" signature="373:546" ph="{...}" />
+            <marker date="1557424602418" expanded="true" signature="598:783" ph="{...}" />
+            <marker date="1557424602418" expanded="true" signature="652:777" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ScoreControl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+          <folding>
+            <marker date="1557425985352" expanded="false" signature="6:100" ph="..." />
+            <marker date="1557425985352" expanded="true" signature="143:1016" ph="{...}" />
+            <marker date="1557425985352" expanded="true" signature="356:660" ph="{...}" />
+            <marker date="1557425985352" expanded="true" signature="693:891" ph="{...}" />
+            <marker date="1557425985352" expanded="true" signature="753:885" ph="{...}" />
+            <marker date="1557425985352" expanded="true" signature="957:1014" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Currency.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+          <folding>
+            <marker date="1557420721457" expanded="true" signature="6:73" ph="..." />
+            <marker date="1557420721457" expanded="true" signature="112:507" ph="{...}" />
+            <marker date="1557420721457" expanded="true" signature="276:340" ph="{...}" />
+            <marker date="1557420721457" expanded="true" signature="366:505" ph="{...}" />
+            <marker date="1557420721457" expanded="true" signature="396:499" ph="{...}" />
           </folding>
         </state>
       </provider>

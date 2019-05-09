@@ -17,7 +17,7 @@ public class SphereControl : MonoBehaviour
     {
         targetObject = GameObject.Find("CubeTwo");
 
-        transform.position = Vector3.MoveTowards(transform.position, targetObject.transform.position, 0.3f);
+        transform.position = Vector3.MoveTowards(transform.position, targetObject.transform.position, 0.9f);
     }
 
     private void OnCollisionEnter(Collision other)

@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Currency : MonoBehaviour
 {
+    [SerializeField] private Text gemText;
+    
     private static int _gems = 0;
     private static bool _hasReward;
 
@@ -15,8 +19,7 @@ public class Currency : MonoBehaviour
     {
         if (_hasReward)
         {
-            var gemText = GetComponent<UnityEngine.UI.Text>();
-            gemText.text = "Total Gems: " + _gems.ToString();
+            gemText.text = "Total Gems: " + _gems;
             _hasReward = false;
         }
     }
