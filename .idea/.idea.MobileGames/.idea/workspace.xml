@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86bb3b41-472f-45d4-a2f5-c46d92a4dc01" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AdManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AdManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SphereControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SphereControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,24 +17,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/AdManager.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/SphereControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="43" column="65" lean-forward="true" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+            <state relative-caret-position="360">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
-                <marker date="1554938306757" expanded="false" signature="6:105" ph="..." />
-                <marker date="1554938306757" expanded="true" signature="145:2022" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="307:401" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="427:751" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="556:745" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="789:893" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="833:887" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="940:1123" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="1175:1753" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="1204:1747" ph="{...}" />
-                <marker date="1554938306757" expanded="true" signature="1789:2020" ph="{...}" />
+                <marker date="1557419628538" expanded="true" signature="62:652" ph="{...}" />
+                <marker date="1557419628538" expanded="true" signature="126:241" ph="{...}" />
+                <marker date="1557419628538" expanded="true" signature="264:437" ph="{...}" />
+                <marker date="1557419628538" expanded="true" signature="489:650" ph="{...}" />
+                <marker date="1557419628538" expanded="true" signature="543:644" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -44,22 +40,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/AdManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Accelerometer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SphereControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AdManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/AdManager.cs" />
         <option value="$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Assets/SphereControl.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="222" />
-    <option name="y" value="114" />
-    <option name="width" value="1378" />
-    <option name="height" value="848" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator currentView="FileSystemExplorer" proportions="" version="1">
@@ -73,26 +72,29 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer">
         <subPane>
           <expand>
             <path>
-              <item name="Project" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
               <item name="MobileGames" type="34e6ba20:FileSystemExplorerNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -111,12 +113,14 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
     <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
   </component>
@@ -133,11 +137,22 @@
       <workItem from="1554059195334" duration="8000" />
       <workItem from="1554059239142" duration="54000" />
       <workItem from="1554936761400" duration="1879000" />
+      <workItem from="1555859223132" duration="430000" />
+      <workItem from="1557417676686" duration="381000" />
+      <workItem from="1557418375830" duration="887000" />
     </task>
+    <task id="LOCAL-00001" summary="Updated .gitignore file">
+      <created>1555859350789</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555859350789</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1941000" />
+    <option name="totallyTimeSpent" value="3639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -149,10 +164,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="222" y="114" width="1378" height="848" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.37666667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1881663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -171,7 +186,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32991204" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Unity" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -186,7 +201,11 @@
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore file" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -198,23 +217,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-          <folding>
-            <marker date="1554938305041" expanded="true" signature="6:65" ph="..." />
-            <marker date="1554938305041" expanded="true" signature="101:754" ph="{...}" />
-            <marker date="1554938305041" expanded="true" signature="206:752" ph="{...}" />
-            <marker date="1554938305041" expanded="true" signature="248:393" ph="/* Replace with your iOS AdMob app ID. Your AdMob App ID will look ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/AdManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="43" column="65" lean-forward="true" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
+        <state relative-caret-position="465">
+          <caret line="43" column="65" selection-start-line="43" selection-start-column="65" selection-end-line="43" selection-end-column="65" />
           <folding>
             <marker date="1554938306757" expanded="false" signature="6:105" ph="..." />
             <marker date="1554938306757" expanded="true" signature="145:2022" ph="{...}" />
@@ -227,6 +233,54 @@
             <marker date="1554938306757" expanded="true" signature="1175:1753" ph="{...}" />
             <marker date="1554938306757" expanded="true" signature="1204:1747" ph="{...}" />
             <marker date="1554938306757" expanded="true" signature="1789:2020" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Accelerometer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding>
+            <marker date="1553665391234" expanded="true" signature="0:35" ph="/* Script for enabling tilt ... */" />
+            <marker date="1553665391234" expanded="true" signature="99:543" ph="{...}" />
+            <marker date="1553665391234" expanded="true" signature="191:251" ph="{...}" />
+            <marker date="1553665391234" expanded="true" signature="278:541" ph="{...}" />
+            <marker date="1553665391234" expanded="true" signature="344:418" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/GoogleMobileAds/Editor/PListProcessor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+          <folding>
+            <marker date="1554938305041" expanded="true" signature="6:65" ph="..." />
+            <marker date="1554938305041" expanded="true" signature="101:754" ph="{...}" />
+            <marker date="1554938305041" expanded="true" signature="206:752" ph="{...}" />
+            <marker date="1554938305041" expanded="true" signature="248:393" ph="/* Replace with your iOS AdMob app ID. Your AdMob App ID will look ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SphereControl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <marker date="1557419628538" expanded="true" signature="62:652" ph="{...}" />
+            <marker date="1557419628538" expanded="true" signature="126:241" ph="{...}" />
+            <marker date="1557419628538" expanded="true" signature="264:437" ph="{...}" />
+            <marker date="1557419628538" expanded="true" signature="489:650" ph="{...}" />
+            <marker date="1557419628538" expanded="true" signature="543:644" ph="{...}" />
           </folding>
         </state>
       </provider>
