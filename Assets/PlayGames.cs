@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 
@@ -9,6 +10,7 @@ public class PlayGames : MonoBehaviour
     {
         var config = new PlayGamesClientConfiguration.Builder().Build();
         PlayGamesPlatform.InitializeInstance(config);
+        PlayGamesPlatform.DebugLogEnabled = true;
         PlayGamesPlatform.Activate();
         
         SignIn();
@@ -16,14 +18,30 @@ public class PlayGames : MonoBehaviour
 
     private static void SignIn()
     {
-        Social.localUser.Authenticate(success => { });
+        Debug.Log("User Signing In");
+        Social.localUser.Authenticate(success =>
+        {
+            if (success)
+            {
+                Debug.Log("Authentication Successful");
+                var userInfo = "Username: " + Social.localUser.userName +
+                                  "\nUser ID: " + Social.localUser.id +
+                                  "\nIsUnderage: " + Social.localUser.underage;
+                Debug.Log(userInfo);
+            }
+            else
+                Debug.Log("Authentication Failed");
+        });
     }
 
     #region  Achievements
 
     public static void UnlockAchievement(string id)
     {
-        Social.ReportProgress(id, 100, success => { });
+        Social.ReportProgress(id, 100, success =>
+        {
+            Debug.Log(success ? "Achievement Unlocked" : "Error Unlocking Achievement");
+        });
     }
 
     public void ShowAchievementsUi()
@@ -37,7 +55,10 @@ public class PlayGames : MonoBehaviour
 
     public static void AddScoreToLeaderboard(string leaderboardId, long score)
     {
-        Social.ReportScore(score, leaderboardId, success => { });
+        Social.ReportScore(score, leaderboardId, success =>
+        {
+            Debug.Log(success ? "Achievement Unlocked" : "Error Unlocking Achievement");
+        });
     }
 
     public void ShowLeaderboardUi()
