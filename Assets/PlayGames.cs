@@ -46,6 +46,7 @@ public class PlayGames : MonoBehaviour
 
     public void ShowAchievementsUi()
     {
+        Debug.Log("Showing Achievements UI");
         Social.ShowAchievementsUI();
     }
     
@@ -63,6 +64,7 @@ public class PlayGames : MonoBehaviour
 
     public void ShowLeaderboardUi()
     {
+        Debug.Log("Showing Leaderboards UI");
         Social.ShowLeaderboardUI();
     }
     
