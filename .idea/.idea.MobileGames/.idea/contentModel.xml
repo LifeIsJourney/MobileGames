@@ -13,6 +13,28 @@
         <e p="AdManager.cs" t="Include" />
         <e p="CameraController.cs" t="Include" />
         <e p="Currency.cs" t="Include" />
+        <e p="FacebookManager.cs" t="Include" />
+        <e p="FacebookSDK" t="Include">
+          <e p="Examples" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ConsoleBase.cs" t="Include" />
+              <e p="LogView.cs" t="Include" />
+              <e p="MenuBase.cs" t="Include" />
+              <e p="SubMenus" t="Include">
+                <e p="AccessTokenMenu.cs" t="Include" />
+                <e p="AppEvents.cs" t="Include" />
+                <e p="AppInvites.cs" t="Include" />
+                <e p="AppLinks.cs" t="Include" />
+                <e p="AppRequests.cs" t="Include" />
+                <e p="DialogShare.cs" t="Include" />
+                <e p="GraphRequest.cs" t="Include" />
+                <e p="MainMenu.cs" t="Include" />
+                <e p="Pay.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="link.xml" t="Include" />
+        </e>
         <e p="GoogleMobileAds" t="Include">
           <e p="Api" t="Include">
             <e p="AdapterStatus.cs" t="Include" />
@@ -342,6 +364,7 @@
         </e>
         <e p="Plugins" t="Include">
           <e p="Android" t="Include">
+            <e p="AndroidManifest.xml" t="Include" />
             <e p="GoogleMobileAdsPlugin" t="Include">
               <e p="AndroidManifest.xml" t="Include" />
             </e>
