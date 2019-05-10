@@ -6,20 +6,30 @@ public class Currency : MonoBehaviour
 {
     [SerializeField] private Text gemText;
     
-    private static int _gems = 0;
+    private static int _earnedGems;
+    private static int _currentGems;
     private static bool _hasReward;
+
+    private void Start()
+    {
+        _currentGems = PlayerPrefs.GetInt("Gems", 0);
+        gemText.text = "Total Gems: " + _currentGems;
+    }
 
     public static void AddGems(int reward)
     {
-        _gems += reward;
+        _earnedGems += reward;
         _hasReward = true;
     }
-
+    
     public void Update()
     {
         if (_hasReward)
         {
-            gemText.text = "Total Gems: " + _gems;
+            var newTotal = _currentGems + _earnedGems;
+            PlayerPrefs.SetInt("Gems", newTotal);
+            
+            gemText.text = "Total Gems: " + PlayerPrefs.GetInt("Gems", 0);
             _hasReward = false;
         }
     }

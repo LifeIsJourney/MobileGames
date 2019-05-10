@@ -24,7 +24,7 @@ public class SphereControl : MonoBehaviour
     {
         if (other.gameObject.name == "CubeTwo")
         {
-            Debug.Log("Score Stopped and Reset Level");
+            Debug.Log("Reloading Scene");
             SceneManager.LoadScene(_scene.name);
         }
     }

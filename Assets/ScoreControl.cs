@@ -17,6 +17,10 @@ public class ScoreControl : MonoBehaviour
         scoreText.text = "Score: " + 0;
 
         _highScore = PlayerPrefs.GetInt("HighScore", 0);
+        
+        Debug.Log("Adding Current High Score to Leaderboard");
+        PlayGames.AddScoreToLeaderboard(GPGSIds.leaderboard_leaderboard, _highScore);
+        
         _highScoreText.text = "High Score: " + _highScore;
         InvokeRepeating(nameof(UpdateScores), 1f, 1f);
     }
@@ -28,6 +32,16 @@ public class ScoreControl : MonoBehaviour
         {
             PlayerPrefs.SetInt("HighScore", _score);
             _highScoreText.text = "High Score: " + _score;
+        }
+
+        if (_score >= 10)
+        {
+            PlayGames.UnlockAchievement(GPGSIds.achievement_reach_10_score);
+        }
+
+        if (_score >= 50)
+        {
+            PlayGames.UnlockAchievement(GPGSIds.achievement_one_fire__reach_50_score);
         }
     }
 
