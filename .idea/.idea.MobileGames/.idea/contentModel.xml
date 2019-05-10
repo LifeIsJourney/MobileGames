@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Alan\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Alan\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_MobileGames.-1145710771.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Alan\Desktop\Mobile\MobileGames" t="IncludeRecursive">
+    <e p="C:\Users\Alan\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_MobileGames.-986861209.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Alan\Desktop\Mobile\BackupV2\MobileGames" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -356,6 +356,7 @@
         </e>
         <e p="GPGSIds.cs" t="Include" />
         <e p="Gyro.cs" t="Include" />
+        <e p="IAPManager.cs" t="Include" />
         <e p="PlayGames.cs" t="Include" />
         <e p="PlayServicesResolver" t="Include">
           <e p="Editor" t="Include">
