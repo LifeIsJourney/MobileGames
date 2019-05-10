@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86bb3b41-472f-45d4-a2f5-c46d92a4dc01" name="Default Changelist" comment="">
+    <list default="true" id="86bb3b41-472f-45d4-a2f5-c46d92a4dc01" name="Default Changelist" comment="Added simple implementation of sharing to Facebook without Facebook SDK">
+      <change afterPath="$PROJECT_DIR$/Assets/ShareSocialScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MobileGames/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayGames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayGames.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelOne.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelOne.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/PlayGames.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="66" column="45" lean-forward="true" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+            <state relative-caret-position="135">
+              <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
               <folding>
                 <marker date="1557514261832" expanded="true" signature="6:87" ph="..." />
                 <marker date="1557514261832" expanded="true" signature="127:1909" ph="{...}" />
@@ -34,6 +36,42 @@
                 <marker date="1557514261832" expanded="true" signature="1573:1756" ph="{...}" />
                 <marker date="1557514261832" expanded="true" signature="1648:1748" ph="{...}" />
                 <marker date="1557514261832" expanded="true" signature="1793:1887" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/FacebookManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+              <folding>
+                <marker date="1557470453979" expanded="true" signature="6:96" ph="..." />
+                <marker date="1557470453979" expanded="true" signature="142:1076" ph="{...}" />
+                <marker date="1557470453979" expanded="true" signature="169:683" ph="{...}" />
+                <marker date="1557470453979" expanded="true" signature="206:634" ph="{...}" />
+                <marker date="1557470453979" expanded="true" signature="255:431" ph="{...}" />
+                <marker date="1557470453979" expanded="true" signature="472:622" ph="{...}" />
+                <marker date="1557470453979" expanded="true" signature="693:987" ph="Login/Logout" />
+                <marker date="1557470453979" expanded="true" signature="746:900" ph="{...}" />
+                <marker date="1557470453979" expanded="true" signature="934:967" ph="{...}" />
+                <marker date="1557470453979" expanded="true" signature="1020:1074" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/ShareSocialScript.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
+              <folding>
+                <marker date="1557515757214" expanded="false" signature="6:78" ph="..." />
+                <marker date="1557515757214" expanded="true" signature="126:897" ph="{...}" />
+                <marker date="1557515757214" expanded="true" signature="133:558" ph="Facebook Variables" />
+                <marker date="1557515757214" expanded="true" signature="596:895" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -79,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/ScoreControl.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
+            <state relative-caret-position="630">
               <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
               <folding>
                 <marker date="1557443685942" expanded="false" signature="6:40" ph="..." />
@@ -106,6 +144,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/AdManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelOne.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GooglePlayGames.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ShareSocialScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScoreControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/IAPManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SphereControl.cs" root0="FORCE_HIGHLIGHTING" />
@@ -127,12 +166,13 @@
         <option value="$PROJECT_DIR$/Assets/IAPManager.cs" />
         <option value="$PROJECT_DIR$/Assets/IAPModal.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayGames.cs" />
+        <option value="$PROJECT_DIR$/Assets/ShareSocialScript.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="662" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
@@ -242,7 +282,7 @@
       <workItem from="1557462678050" duration="2743000" />
       <workItem from="1557469846979" duration="720000" />
       <workItem from="1557509223032" duration="2815000" />
-      <workItem from="1557513902217" duration="360000" />
+      <workItem from="1557513902217" duration="2097000" />
     </task>
     <task id="LOCAL-00001" summary="Updated .gitignore file">
       <created>1555859350789</created>
@@ -307,11 +347,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557513250494</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated Debugging Messages">
+      <created>1557514354530</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1557514354530</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25013000" />
+    <option name="totallyTimeSpent" value="26750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,10 +370,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-7" y="0" width="662" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13965885" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -371,7 +418,8 @@
     <MESSAGE value="Updated code to handle play games responses" />
     <MESSAGE value="Add facebook manager script" />
     <MESSAGE value="Added button and script to handle in app purchasing of 50 gems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added button and script to handle in app purchasing of 50 gems" />
+    <MESSAGE value="Updated Debugging Messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Debugging Messages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -479,25 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/FacebookManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
-          <folding>
-            <marker date="1557470453979" expanded="true" signature="6:96" ph="..." />
-            <marker date="1557470453979" expanded="true" signature="142:1076" ph="{...}" />
-            <marker date="1557470453979" expanded="true" signature="169:683" ph="{...}" />
-            <marker date="1557470453979" expanded="true" signature="206:634" ph="{...}" />
-            <marker date="1557470453979" expanded="true" signature="255:431" ph="{...}" />
-            <marker date="1557470453979" expanded="true" signature="472:622" ph="{...}" />
-            <marker date="1557470453979" expanded="true" signature="693:987" ph="Login/Logout" />
-            <marker date="1557470453979" expanded="true" signature="746:900" ph="{...}" />
-            <marker date="1557470453979" expanded="true" signature="934:967" ph="{...}" />
-            <marker date="1557470453979" expanded="true" signature="1020:1074" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/IAPManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -533,27 +562,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/ScoreControl.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-          <folding>
-            <marker date="1557443685942" expanded="false" signature="6:40" ph="..." />
-            <marker date="1557443685942" expanded="true" signature="83:1389" ph="{...}" />
-            <marker date="1557443685942" expanded="true" signature="304:775" ph="{...}" />
-            <marker date="1557443685942" expanded="true" signature="808:1264" ph="{...}" />
-            <marker date="1557443685942" expanded="true" signature="868:1000" ph="{...}" />
-            <marker date="1557443685942" expanded="true" signature="1027:1124" ph="{...}" />
-            <marker date="1557443685942" expanded="true" signature="1151:1258" ph="{...}" />
-            <marker date="1557443685942" expanded="true" signature="1330:1387" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/PlayGames.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="66" column="45" lean-forward="true" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+        <state relative-caret-position="135">
+          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
           <folding>
             <marker date="1557514261832" expanded="true" signature="6:87" ph="..." />
             <marker date="1557514261832" expanded="true" signature="127:1909" ph="{...}" />
@@ -569,6 +581,55 @@
             <marker date="1557514261832" expanded="true" signature="1573:1756" ph="{...}" />
             <marker date="1557514261832" expanded="true" signature="1648:1748" ph="{...}" />
             <marker date="1557514261832" expanded="true" signature="1793:1887" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FacebookManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <marker date="1557470453979" expanded="true" signature="6:96" ph="..." />
+            <marker date="1557470453979" expanded="true" signature="142:1076" ph="{...}" />
+            <marker date="1557470453979" expanded="true" signature="169:683" ph="{...}" />
+            <marker date="1557470453979" expanded="true" signature="206:634" ph="{...}" />
+            <marker date="1557470453979" expanded="true" signature="255:431" ph="{...}" />
+            <marker date="1557470453979" expanded="true" signature="472:622" ph="{...}" />
+            <marker date="1557470453979" expanded="true" signature="693:987" ph="Login/Logout" />
+            <marker date="1557470453979" expanded="true" signature="746:900" ph="{...}" />
+            <marker date="1557470453979" expanded="true" signature="934:967" ph="{...}" />
+            <marker date="1557470453979" expanded="true" signature="1020:1074" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ScoreControl.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <marker date="1557443685942" expanded="false" signature="6:40" ph="..." />
+            <marker date="1557443685942" expanded="true" signature="83:1389" ph="{...}" />
+            <marker date="1557443685942" expanded="true" signature="304:775" ph="{...}" />
+            <marker date="1557443685942" expanded="true" signature="808:1264" ph="{...}" />
+            <marker date="1557443685942" expanded="true" signature="868:1000" ph="{...}" />
+            <marker date="1557443685942" expanded="true" signature="1027:1124" ph="{...}" />
+            <marker date="1557443685942" expanded="true" signature="1151:1258" ph="{...}" />
+            <marker date="1557443685942" expanded="true" signature="1330:1387" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ShareSocialScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="76" selection-start-line="18" selection-start-column="76" selection-end-line="18" selection-end-column="76" />
+          <folding>
+            <marker date="1557515757214" expanded="false" signature="6:78" ph="..." />
+            <marker date="1557515757214" expanded="true" signature="126:897" ph="{...}" />
+            <marker date="1557515757214" expanded="true" signature="133:558" ph="Facebook Variables" />
+            <marker date="1557515757214" expanded="true" signature="596:895" ph="{...}" />
           </folding>
         </state>
       </provider>

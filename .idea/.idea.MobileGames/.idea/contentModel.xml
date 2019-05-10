@@ -420,6 +420,7 @@
           </e>
         </e>
         <e p="ScoreControl.cs" t="Include" />
+        <e p="ShareSocialScript.cs" t="Include" />
         <e p="SphereControl.cs" t="Include" />
         <e p="SquareControl.cs" t="Include" />
         <e p="UnitBehaviour.cs" t="Include" />
