@@ -1240,6 +1240,7 @@ GameObject:
   - component: {fileID: 933663275}
   - component: {fileID: 933663274}
   - component: {fileID: 933663277}
+  - component: {fileID: 933663278}
   m_Layer: 5
   m_Name: FBShareButton
   m_TagString: Untagged
@@ -1307,8 +1308,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 933663277}
-        m_MethodName: ShareScoreFacebook
+      - m_Target: {fileID: 933663278}
+        m_MethodName: FacebookShare
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1367,6 +1368,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97ca61c12ac4e32409d6aaea875fe0df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &933663278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933663272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61711d972553f4d4c852fd258d491329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &961312777
@@ -2801,7 +2814,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2124157188}
-        m_MethodName: ShareScoreFacebook
+        m_MethodName: ShareScoreTwitter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

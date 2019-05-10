@@ -30,10 +30,23 @@ public class FacebookManager : MonoBehaviour
     
     #region Login/Logout
 
-    public void FacebookLogin()
+    private void FacebookLogin()
     {
-        var permissions = new List<string>() { "public_profile", "email", "user_friends" };
-        FB.LogInWithReadPermissions(permissions);
+        //var permissions = new List<string>() { "public_profile", "email", "user_friends" };
+        FB.LogInWithReadPermissions(callback:OnLogIn);
+    }
+
+    private void OnLogIn(ILoginResult result)
+    {
+        if (FB.IsLoggedIn)
+        {
+            var token = AccessToken.CurrentAccessToken;
+            Debug.Log("Facebook UserID: " + token.UserId);
+        }
+        else
+        {
+            Debug.Log("Cancelled Login");
+        }
     }
 
     public void FacebookLogout()
@@ -45,6 +58,24 @@ public class FacebookManager : MonoBehaviour
 
     public void FacebookShare()
     {
-        FB.ShareLink(new System.Uri(""));
+        FacebookLogin();
+        FB.ShareLink(contentTitle:"Check Out My New High Score in Chaser:",
+            contentURL:new System.Uri("https://google.com"),
+            contentDescription:"Check Out Chaser and Challenge Yourself to Score Better",
+            callback:OnShare);
+    }
+
+    private void OnShare(IShareResult result)
+    {
+        if (result.Cancelled || !string.IsNullOrEmpty(result.Error))
+        {
+            Debug.Log("Share Score Error" + result.Error);
+        }
+        else if (!string.IsNullOrEmpty(result.PostId))
+        {
+            Debug.Log(result.PostId);
+        }
+        else
+            Debug.Log("Share Score Success");
     }
 }
